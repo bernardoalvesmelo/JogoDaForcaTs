@@ -35,7 +35,7 @@ export class JogoForcaTela {
         "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z".split(',');
         
         alfabeto.forEach(l => {
-            let botao: HTMLButtonElement = document.createElement("button");
+            let botao = document.createElement("button");
             botao.textContent = l;
             botao.id = l;
             botao.addEventListener('click', (e) => this.clicarBotao(e));
@@ -81,7 +81,7 @@ export class JogoForcaTela {
             return;
         }
 
-        this.imagem.src = ".\\imagens\\forca" + this.jogoForca.tentativas + ".png";
+        this.imagem.src = "./imagens/forca" + this.jogoForca.tentativas + ".png";
 
         if (this.jogoForca.jogoAcabou()) {
             this.mensagem.textContent = "Você perdeu!";
@@ -98,7 +98,7 @@ export class JogoForcaTela {
     resetar(): void{
         this.jogoForca.resetar();
         this.mensagemTentativas.textContent = "Tentativas: " + this.jogoForca.tentativas;
-        this.imagem.src = ".\\imagens\\forca" + this.jogoForca.tentativas + ".png";
+        this.imagem.src = "./imagens/forca" + this.jogoForca.tentativas + ".png";
         this.leitor.value = "";
         this.palavra.textContent = this.jogoForca.palavraVisivel.join("");
         this.btnTentar.disabled = false;

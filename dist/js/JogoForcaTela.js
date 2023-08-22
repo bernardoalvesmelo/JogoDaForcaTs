@@ -58,7 +58,7 @@ export class JogoForcaTela {
             }
             return;
         }
-        this.imagem.src = ".\\imagens\\forca" + this.jogoForca.tentativas + ".png";
+        this.imagem.src = "./imagens/forca" + this.jogoForca.tentativas + ".png";
         if (this.jogoForca.jogoAcabou()) {
             this.mensagem.textContent = "Você perdeu!";
             this.palavra.textContent = this.jogoForca.palavraSecreta;
@@ -71,7 +71,7 @@ export class JogoForcaTela {
     resetar() {
         this.jogoForca.resetar();
         this.mensagemTentativas.textContent = "Tentativas: " + this.jogoForca.tentativas;
-        this.imagem.src = ".\\imagens\\forca" + this.jogoForca.tentativas + ".png";
+        this.imagem.src = "./imagens/forca" + this.jogoForca.tentativas + ".png";
         this.leitor.value = "";
         this.palavra.textContent = this.jogoForca.palavraVisivel.join("");
         this.btnTentar.disabled = false;
