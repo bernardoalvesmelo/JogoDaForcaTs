@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" type="module" defer></script>
+</head>
+<body>
+    <img id ="imagem" class="imagem" src=".\imagens\forca5.png" alt="Boneco da Forca">
+    <div class="informacoes">
+        <div class="cabecalho">Jogo da Forca</div>
+        <p id="tentativas" class="tentativas">Tentativas: 5</p>
+        <div id="palavra" class="palavra">_______</div>
+        <div class="display">
+            <input id="leitor" type="text" class="leitor"/>
+            <button id="btnTentar" class="btn-tentar">Tentar</button>
+            <button id="btnResetar" class="btn-resetar">Resetar</button>
+        </div>
+        <div id="mensagem" class="mensagem">Digite uma letra</div>
+    </div>
+    <div id="teclado" class="teclado"></div>
+</body>
+</html>
